@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
+    <link href="../tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 h-screen flex flex-col items-center justify-center">
+    <p class="pl-20 pr-20">
+        Le but ici est d'afficher une popup alert en javascript, pour ce faire il faut insérer
+        ceci dans le champ input :   <strong>&quot;&gt;&lt;img src=x onerror=&quot;alert(':) You have been hacked')&quot;&gt;&lt;a hre=&quot;a
+</strong>  
+    </p>
+    <p>
+        Pourquoi ? Dans cet exemple on doit ajouter du code juste après le href et y insérer notre code malicieux
+    </p>
+    <p>
+        On passe de <strong>&lt;a class=&quot;text-blue-500&quot; href=&quot;${query}&quot;&gt;Your URL&lt;/a&gt;</strong>
+    </p>
+    <p>
+        A : <strong>&lt;a class=&quot;text-blue-500&quot; href=&quot;&quot;&gt;&lt;img src=x onerror=&quot;alert(':) You have been hacked')&quot;&gt;&lt;a hre=&quot;a&quot;&gt;Your URL&lt;/a&gt;</strong>
+    </p>
+    <p>
+        Pour corriger cela, il faut sanitize le contenu du champs
+    </p>
+    <div class="bg-white p-8 rounded-xl shadow-md w-96 mt-4">
+        <h1 class="text-2xl font-bold mb-4">Search Results</h1>
+        <div class="flex space-x-2">
+            <input id="search" type="text" placeholder="Search here" class="border p-2 flex-grow rounded">
+            <button onclick="search()" class="bg-blue-500 text-white p-2 rounded hover:bg-blue-700">Search</button>
+        </div>
+        
+        <div id="results" class="text-gray-700 mt-4"></div>
+    </div>
+    <script>
+    function search() {
+        var query = document.getElementById('search').value;
+        var resultsDiv = document.getElementById('results');
+        var element = `<a class="text-blue-500" href="${query}">Your URL</a>`
+        resultsDiv.innerHTML = element;
+    }
+      
+   
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./tailwind.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="p-14">
+    <h1 class="text-2xl ml-4">Différent cas de faille XSS (Cross-Site Scripting) </h1>
+    <div class="mt-2 grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-4 p-4">
+        <div class=" bg-gray-100 p-4 rounded hover:bg-gray-200 shadow-lg cursor-pointer">
+            <a href="./DOM/Level 1.html">
+                <div class="flex justify-between items-center">
+                    <h2 class="font-bold">Dom XSS</h2>
+                    <p class="bg-indigo-600 text-white px-2 rounded text-sm text-center">Cas numéro 1</p>
+                </div>
+                <p class="text-gray-600 my-4">Affichage d'une popup d'alert</p>
+            </a>
+            <a href="https://portswigger.net/web-security/cross-site-scripting" target="_blank" class="text-sm text-gray-500 mt-2 underline">Plus d'informations</a>
+        </div>
+
+        <div class=" bg-gray-100 p-4 rounded hover:bg-gray-200 shadow-lg cursor-pointer">
+            <a href="./DOM/Level 2.html">
+                <div class="flex justify-between items-center">
+                    <h2 class="font-bold">DOM XSS</h2>
+                    <p class="bg-indigo-600 text-white px-2  rounded text-sm text-center">Cas numéro 2</p>
+                </div>
+                <p class="text-gray-600 my-4">Affichage d'une popup d'alert</p>
+            </a>
+            <a href="https://portswigger.net/web-security/cross-site-scripting" target="_blank" class="text-sm text-gray-500 mt-2 underline">Plus d'informations</a>
+        </div>
+ 
+        <div class=" bg-gray-100 p-4 rounded hover:bg-gray-200 shadow-lg cursor-pointer">
+            <a href="./DOM/Level 3.html">
+                <div class="flex justify-between items-center">
+                    <h2 class="font-bold">Fonction maléfique</h2>
+                    <p class="bg-indigo-600 text-white px-2  rounded text-sm text-center">Cas numéro 3</p>
+                </div>
+                <p class="text-gray-600 my-4">Affichage d'une popup d'alert</p>
+            </a>
+            <a href="https://portswigger.net/web-security/cross-site-scripting" target="_blank" class="text-sm text-gray-500 mt-2 underline">Plus d'informations</a>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
